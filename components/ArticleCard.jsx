@@ -1,16 +1,15 @@
+import PropTypes from 'prop-types';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 
-export interface ArticleCardProps {
-  title: string;
-  slug: string;
-  imageUrl: string;
-  description: string;
-}
+export default function ArticleCard({ title, slug, imageUrl, description }) {
+  if (typeof imageUrl !== 'string' || imageUrl.trim() === '') {
+    console.error(`ERROR: ArticleCard received invalid imageUrl for slug: ${slug}. Received:`, imageUrl);
+    return null;
+  }
 
-export default function ArticleCard({ title, slug, imageUrl, description }: ArticleCardProps) {
   return (
     <NextLink href={'/blog/' + slug} passHref>
       <ArticleCardWrapper className="article-card-wrapper">
@@ -27,6 +26,15 @@ export default function ArticleCard({ title, slug, imageUrl, description }: Arti
     </NextLink>
   );
 }
+
+// Prop validation (this will also warn you in development)
+ArticleCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired, // This will give a console warning in dev mode if not a string
+  description: PropTypes.string.isRequired,
+};
+// ✅ Styled Components
 
 const ArticleCardWrapper = styled.a`
   display: flex;
@@ -87,7 +95,6 @@ const Content = styled.div`
 
 const Title = styled.h4`
   font-size: 1.8rem;
-
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -97,7 +104,6 @@ const Title = styled.h4`
 
 const Description = styled.p`
   font-size: 1.6rem;
-
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

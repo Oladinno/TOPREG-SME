@@ -4,12 +4,7 @@ import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
 
-type SingleFooterListItem = { title: string; href: string };
-type FooterListItems = SingleFooterListItem[];
-type SingleFooterList = { title: string; items: FooterListItems };
-type FooterItems = SingleFooterList[];
-
-const footerItems: FooterItems = [
+const footerItems = [
   {
     title: 'Company',
     items: [
@@ -52,27 +47,19 @@ export default function Footer() {
       <Container>
         <ListContainer>
           {footerItems.map((singleItem) => (
-            <FooterList key={singleItem.title} {...singleItem} />
+            <FooterList key={singleItem.title} title={singleItem.title} items={singleItem.items} />
           ))}
         </ListContainer>
         <BottomBar>
           <ShareBar>
             <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
-              </a>
+              <a><TwitterIcon size={50} round={true} /></a>
             </NextLink>
-
             <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
-              </a>
+              <a><FacebookIcon size={50} round={true} /></a>
             </NextLink>
-
             <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
-                <LinkedinIcon size={50} round={true} />
-              </a>
+              <a><LinkedinIcon size={50} round={true} /></a>
             </NextLink>
           </ShareBar>
           <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
@@ -82,18 +69,18 @@ export default function Footer() {
   );
 }
 
-function FooterList({ title, items }: SingleFooterList) {
+function FooterList({ title, items }) {
   return (
     <ListWrapper>
       <ListHeader>{title}</ListHeader>
       {items.map((singleItem) => (
-        <ListItem key={singleItem.href} {...singleItem} />
+        <ListItem key={singleItem.href} title={singleItem.title} href={singleItem.href} />
       ))}
     </ListWrapper>
   );
 }
 
-function ListItem({ title, href }: SingleFooterListItem) {
+function ListItem({ title, href }) {
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>
@@ -103,6 +90,7 @@ function ListItem({ title, href }: SingleFooterListItem) {
   );
 }
 
+// Styled Components
 const FooterWrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 4rem;

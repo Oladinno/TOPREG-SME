@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MailchimpSubscribe, { DefaultFormFields } from 'react-mailchimp-subscribe';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import styled from 'styled-components';
 import { EnvVars } from 'env';
 import useEscClose from 'hooks/useEscKey';
@@ -11,16 +11,12 @@ import Input from './Input';
 import MailSentState from './MailSentState';
 import Overlay from './Overlay';
 
-export interface NewsletterModalProps {
-  onClose: () => void;
-}
-
-export default function NewsletterModal({ onClose }: NewsletterModalProps) {
+export default function NewsletterModal({ onClose }) {
   const [email, setEmail] = useState('');
 
   useEscClose({ onClose });
 
-  function onSubmit(event: React.FormEvent<HTMLFormElement>, enrollNewsletter: (props: DefaultFormFields) => void) {
+  function onSubmit(event, enrollNewsletter) {
     event.preventDefault();
     console.log({ email });
     if (email) {
@@ -36,7 +32,7 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
         return (
           <Overlay>
             <Container>
-              <Card onSubmit={(event: React.FormEvent<HTMLFormElement>) => onSubmit(event, subscribe)}>
+              <Card onSubmit={(event) => onSubmit(event, subscribe)}>
                 <CloseIconContainer>
                   <CloseIcon onClick={onClose} />
                 </CloseIconContainer>
@@ -47,7 +43,7 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                     <Row>
                       <CustomInput
                         value={email}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email..."
                         required
                       />
@@ -55,7 +51,7 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                         Submit
                       </CustomButton>
                     </Row>
-                    {message && <ErrorMessage dangerouslySetInnerHTML={{ __html: message as string }} />}
+                    {message && <ErrorMessage dangerouslySetInnerHTML={{ __html: message }} />}
                   </>
                 )}
               </Card>

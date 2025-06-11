@@ -1,13 +1,8 @@
-import NextImage, { ImageProps } from 'next/image';
+import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-interface ArticleImageProps extends ImageProps {
-  src: string;
-  caption?: string;
-}
-
-export default function ArticleImage({ src, caption, ...rest }: ArticleImageProps) {
+export default function ArticleImage({ src, caption, ...rest }) {
   return (
     <Wrapper>
       <ImageWrapper>

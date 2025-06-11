@@ -69,7 +69,7 @@ export default function FeaturesGallery() {
     );
   });
 
-  function handleTabClick(idx: number) {
+  function handleTabClick(idx) {
     setCurrentTab(TABS[idx]);
   }
 
@@ -87,6 +87,7 @@ export default function FeaturesGallery() {
   );
 }
 
+// Styled components
 const FeaturesGalleryWrapper = styled(Container)`
   display: flex;
   align-items: center;
@@ -126,11 +127,11 @@ const TabsContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div<{ isActive: boolean }>`
+const ImageContainer = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 0.8rem;
-  flex: ${(p) => (p.isActive ? '2' : '0')};
+  flex: ${(props) => (props.isActive ? '2' : '0')};
   box-shadow: var(--shadow-md);
 
   &:before {
@@ -149,17 +150,17 @@ const ImageContainer = styled.div<{ isActive: boolean }>`
   }
 
   ${media('<=desktop')} {
-    width: ${(p) => (p.isActive ? '100%' : '0')};
+    width: ${(props) => (props.isActive ? '100%' : '0')};
   }
 `;
 
-const Tab = styled.div<{ isActive: boolean }>`
+const Tab = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;
   background: rgb(var(--cardBackground));
   box-shadow: var(--shadow-md);
-  opacity: ${(p) => (p.isActive ? 1 : 0.6)};
+  opacity: ${(props) => (props.isActive ? 1 : 0.6)};
   cursor: pointer;
   border-radius: 0.6rem;
   transition: opacity 0.2s;

@@ -1,19 +1,20 @@
 import NextImage from 'next/image';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Container from './Container';
 import OverTitle from './OverTitle';
 import RichText from './RichText';
 
-export interface BasicSectionProps {
-  imageUrl: string;
-  title: string;
-  overTitle: string;
-  reversed?: boolean;
-}
+export default function BasicSection({ imageUrl, title, overTitle, reversed, children }) {
+  // Add a robust check for imageUrl here
+  if (typeof imageUrl !== 'string' || imageUrl.trim() === '') {
+    // Optionally log this error to help find where the bad data is coming from
+    console.error(`ERROR: BasicSection received invalid or empty imageUrl for title "${title}". Received:`, imageUrl);
+    // Return null or a fallback element if the image is invalid
+    return null; // This will prevent the component from rendering without a valid image
+  }
 
-export default function BasicSection({ imageUrl, title, overTitle, reversed, children }: PropsWithChildren<BasicSectionProps>) {
   return (
     <BasicSectionWrapper reversed={reversed}>
       <ImageContainer>
@@ -47,8 +48,8 @@ const CustomOverTitle = styled(OverTitle)`
 
 const ImageContainer = styled.div`
   flex: 1;
-
   position: relative;
+
   &:before {
     display: block;
     content: '';
@@ -73,14 +74,13 @@ const ContentContainer = styled.div`
   flex: 1;
 `;
 
-type Props = Pick<BasicSectionProps, 'reversed'>;
 const BasicSectionWrapper = styled(Container)`
   display: flex;
   align-items: center;
-  flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
+  flex-direction: ${props => (props.reversed ? 'row-reverse' : 'row')};
 
   ${ImageContainer} {
-    margin: ${(p: Props) => (p.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
+    margin: ${props => (props.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
   }
 
   ${media('<=desktop')} {

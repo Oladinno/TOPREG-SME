@@ -1,15 +1,17 @@
-import NextLink from 'next/link'
-import { useRouter } from 'next/router'
-import { PropsWithChildren, useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import { NavItems } from 'types'
-import ClientOnly from './ClientOnly'
-import CloseIcon from './CloseIcon'
-import OriginalDrawer from './Drawer'
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+// Removed: NavItems type import as it's TypeScript-specific
+import ClientOnly from './ClientOnly';
+import CloseIcon from './CloseIcon';
+import OriginalDrawer from './Drawer';
 
-type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>
+// Removed: type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>
+// PropsWithChildren and NavItems are TypeScript specific.
+// We'll handle props directly in the function signatures.
 
-export default function NavigationDrawer({ children, items }: NavigationDrawerProps) {
+export default function NavigationDrawer({ children, items }) { // Removed type annotation
   return (
     <OriginalDrawer.Drawer>
       <Wrapper>
@@ -26,21 +28,21 @@ export default function NavigationDrawer({ children, items }: NavigationDrawerPr
       </Wrapper>
       {children}
     </OriginalDrawer.Drawer>
-  )
+  );
 }
 
-function NavItemsList({ items }: NavigationDrawerProps) {
-  const { close } = OriginalDrawer.useDrawer()
-  const router = useRouter()
+function NavItemsList({ items }) { // Removed type annotation
+  const { close } = OriginalDrawer.useDrawer();
+  const router = useRouter();
 
   useEffect(() => {
     function handleRouteChangeComplete() {
-      close()
+      close();
     }
 
-    router.events.on('routeChangeComplete', handleRouteChangeComplete)
-    return () => router.events.off('routeChangeComplete', handleRouteChangeComplete)
-  }, [close, router])
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    return () => router.events.off('routeChangeComplete', handleRouteChangeComplete);
+  }, [close, router]);
 
   return (
     <ul>
@@ -49,17 +51,17 @@ function NavItemsList({ items }: NavigationDrawerProps) {
           <NavItem key={idx}>
             <NextLink href={singleItem.href}>{singleItem.title}</NextLink>
           </NavItem>
-        )
+        );
       })}
     </ul>
-  )
+  );
 }
 
 function DrawerCloseButton() {
-  const ref = useRef(null)
-  const a11yProps = OriginalDrawer.useA11yCloseButton(ref)
+  const ref = useRef(null);
+  const a11yProps = OriginalDrawer.useA11yCloseButton(ref);
 
-  return <CloseIcon className="close-icon" _ref={ref} {...a11yProps} />
+  return <CloseIcon className="close-icon" _ref={ref} {...a11yProps} />;
 }
 
 const Wrapper = styled.div`
@@ -108,7 +110,7 @@ const Wrapper = styled.div`
       margin-bottom: 3rem;
     }
   }
-`
+`;
 
 const NavItem = styled.li`
   a {
@@ -121,4 +123,4 @@ const NavItem = styled.li`
     padding: 0.5rem 1rem;
     text-align: center;
   }
-`
+`;

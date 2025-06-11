@@ -7,16 +7,11 @@ import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import { useResizeObserver } from 'hooks/useResizeObserver';
-import { SingleArticle } from 'types';
 import { media } from 'utils/media';
 
-interface ScrollableBlogPostsProps {
-  posts: SingleArticle[];
-}
-
-export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps) {
+export default function ScrollableBlogPosts({ posts }) {
   const [hasMounted, setHasMounted] = useState(false);
-  const { ref, width = 1 } = useResizeObserver<HTMLDivElement>();
+  const { ref, width = 1 } = useResizeObserver();
 
   const oneItemWidth = 350;
   const noOfItems = width / oneItemWidth;
@@ -37,7 +32,7 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
       <SwiperContainer ref={ref}>
         {hasMounted && (
           <Swiper modules={[A11y]} slidesPerView={noOfItems} spaceBetween={10} loop>
-            {posts.map((singlePost, idx) => (
+            {posts.map((singlePost) => (
               <SwiperSlide key={singlePost.meta.title}>
                 <ArticleCard
                   title={singlePost.meta.title}
@@ -56,7 +51,6 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
 
 const Content = styled.div`
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +63,7 @@ const Content = styled.div`
 const Section = styled.section`
   display: flex;
   flex-direction: column;
+
   & > *:not(:first-child) {
     margin-top: 1rem;
   }

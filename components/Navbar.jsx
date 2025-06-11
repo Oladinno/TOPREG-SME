@@ -4,33 +4,28 @@ import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
-import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
-import { NavItems, SingleNavItem } from 'types';
-import { media } from 'utils/media';
+import { useScrollPosition } from 'hooks/useScrollPosition';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
 import Logo from './Logo';
+import { media } from 'utils/media';
 
-const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
+const ColorSwitcher = dynamic(() => import('./ColorSwitcher'), { ssr: false });
 
-type NavbarProps = { items: NavItems };
-type ScrollingDirections = 'up' | 'down' | 'none';
-type NavbarContainerProps = { hidden: boolean; transparent: boolean };
-
-export default function Navbar({ items }: NavbarProps) {
+export default function Navbar({ items }) {
   const router = useRouter();
   const { toggle } = Drawer.useDrawer();
-  const [scrollingDirection, setScrollingDirection] = useState<ScrollingDirections>('none');
+  const [scrollingDirection, setScrollingDirection] = useState('none');
 
-  let lastScrollY = useRef(0);
+  const lastScrollY = useRef(0);
   const lastRoute = useRef('');
   const stepSize = useRef(50);
 
   useScrollPosition(scrollPositionCallback, [router.asPath], undefined, undefined, 50);
 
-  function scrollPositionCallback({ currPos }: ScrollPositionEffectProps) {
+  function scrollPositionCallback({ currPos }) {
     const routerPath = router.asPath;
     const hasRouteChanged = routerPath !== lastRoute.current;
 
@@ -88,7 +83,7 @@ export default function Navbar({ items }: NavbarProps) {
   );
 }
 
-function NavItem({ href, title, outlined }: SingleNavItem) {
+function NavItem({ href, title, outlined }) {
   const { setIsModalOpened } = useNewsletterModalContext();
 
   function showNewsletterModal() {
@@ -132,11 +127,10 @@ const LogoWrapper = styled.a`
   display: flex;
   margin-right: auto;
   text-decoration: none;
-
   color: rgb(var(--logoColor));
 `;
 
-const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
+const NavItemWrapper = styled.li`
   background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
@@ -144,13 +138,15 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   line-height: 2;
 
   &:hover {
-    background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
+    background-color: ${(p) =>
+      p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent'};
     transition: background-color 0.2s;
   }
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) =>
+      p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)'};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -162,7 +158,7 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   }
 `;
 
-const NavbarContainer = styled.div<NavbarContainerProps>`
+const NavbarContainer = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -174,7 +170,8 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   background-color: rgb(var(--navbarBackground));
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   visibility: ${(p) => (p.hidden ? 'hidden' : 'visible')};
-  transform: ${(p) => (p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)')};
+  transform: ${(p) =>
+    p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)'};
 
   transition-property: transform, visibility, height, box-shadow, background-color;
   transition-duration: 0.15s;

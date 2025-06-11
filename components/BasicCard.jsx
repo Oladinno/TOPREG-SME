@@ -1,13 +1,15 @@
 import NextImage from 'next/image';
 import styled from 'styled-components';
 
-interface BasicCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-}
+export default function BasicCard({ title, description, imageUrl }) {
+  // Add a robust check for imageUrl
+  if (typeof imageUrl !== 'string' || imageUrl.trim() === '') {
+    // Optionally log this error to help find where the bad data is coming from
+    console.error(`BasicCard: Missing or invalid imageUrl for title "${title}". Received:`, imageUrl);
+    // Return null or a placeholder if the image is invalid
+    return null;
+  }
 
-export default function BasicCard({ title, description, imageUrl }: BasicCardProps) {
   return (
     <Card>
       <NextImage src={imageUrl} width={128} height={128} alt={title} />
