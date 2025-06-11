@@ -16,43 +16,49 @@ export default function Homepage({ posts }) {
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME}</title>
+        <title>Aje 360 | Empowering Africa's Entrepreneurs </title>
         <meta
           name="description"
-          content="Tempor nostrud velit fugiat nostrud duis incididunt Lorem deserunt est tempor aute dolor ad elit."
+          content="Aje 360 – powerful tools for African SMEs to thrive with clarity, confidence, and control."
         />
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection
-            imageUrl="/demo-illustration-1.svg"
-            title="Lorem ipsum dolor sit amet consectetur."
-            overTitle="sit amet gogo"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
-              voluptate quo deleniti animi laboriosam.{' '}
-              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
-              at suscipit quis est soluta?
-            </p>
-          </BasicSection>
+
+          {/* Vision Statement Section */}
+<BasicSection
+  imageUrl="/demo-illustration-1.svg"
+  title="Empowering African Entrepreneurs"
+  overTitle="Our Vision"
+>
+  {/* The content below will be passed as 'children' to BasicSection */}
+  At <strong>Aje 360</strong>, we are committed to building bold, reliable, and relevant tools that empower entrepreneurs
+  across Africa to scale their businesses with clarity, confidence, and control.
+  <br /><br />
+  We imagine a continent where no business is left behind — from the roadside vendor to the rising startup,
+  every entrepreneur deserves access to simple yet powerful tools that make them operate like global players.
+</BasicSection> {/* <-- Corrected: This now properly closes BasicSection */}
+
+  
+
+         {/* Value Proposition Section */}
           <BasicSection
             imageUrl="/demo-illustration-2.svg"
-            title="Lorem ipsum dolor sit."
-            overTitle="lorem ipsum"
+            title="Why Aje 360?"
+            overTitle="Built for Growth"
             reversed
           >
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore{' '}
-              <strong>voluptate quo deleniti animi laboriosam</strong>. Possimus ullam velit rem itaque consectetur, in distinctio?
+               We don't just help African businesses survive — we help them thrive. Our platform is designed to equip you with 
+              the systems and confidence to manage your operations like a pro.
+
             </p>
             <ul>
-              <li>Professional point 1</li>
-              <li>Professional remark 2</li>
-              <li>Professional feature 3</li>
+              <li><strong>Smart Invoicing</strong> — Create and track invoices effortlessly.</li>
+              <li><strong>Inventory Tools</strong> — Stay on top of your stock and supplies.</li>
+              <li><strong>Business Insights</strong> — Make informed decisions with data-driven dashboards.</li>
             </ul>
           </BasicSection>
         </WhiteBackgroundContainer>

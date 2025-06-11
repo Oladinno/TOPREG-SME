@@ -3,14 +3,7 @@ import styled from 'styled-components';
 import ArticleImage from 'components/ArticleImage';
 import { media } from 'utils/media';
 
-interface HeaderProps {
-  title: string;
-  formattedDate: string;
-  imageUrl: string;
-  readTime: string;
-}
-
-export default function Header({ title, formattedDate, imageUrl, readTime }: HeaderProps) {
+export default function Header({ title, formattedDate, imageUrl, readTime }) {
   return (
     <HeaderContainer>
       <ArticleImage src={imageUrl} />

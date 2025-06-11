@@ -1,17 +1,14 @@
 import Head from 'next/head';
-import { PropsWithChildren } from 'react';
+// Removed: PropsWithChildren import as it's TypeScript-specific
 import styled from 'styled-components';
-import { EnvVars } from 'env';
+import { EnvVars } from 'env'; // Assuming 'env' exports a plain JS object or value
 import { media } from 'utils/media';
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 
-export interface PageProps {
-  title: string;
-  description?: string;
-}
+// Removed: export interface PageProps { ... } as it's TypeScript-specific
 
-export default function Page({ title, description, children }: PropsWithChildren<PageProps>) {
+export default function Page({ title, description, children }) { // Removed type annotation
   return (
     <>
       <Head>

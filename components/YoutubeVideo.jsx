@@ -3,12 +3,9 @@ import styled from 'styled-components';
 
 import playIcon from '../public/play-icon.svg';
 
-interface YoutubeVideoProps {
-  title?: string;
-  url: string;
-}
+// Removed: interface YoutubeVideoProps { ... } as it's TypeScript-specific
 
-export default function YoutubeVideo(props: YoutubeVideoProps) {
+export default function YoutubeVideo(props) { // Removed type annotation 'YoutubeVideoProps'
   const { title, url } = props;
   const videoHash = extractVideoHashFromUrl(url);
   const srcDoc = `<style>
@@ -45,8 +42,8 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
     width: 100%;
   }
   </style>
-  <a style="color: rgb(var(--primary))" href=https://www.youtube.com/embed/${videoHash}?autoplay=1>
-    <img class="thumbnail" src="https://img.youtube.com/vi/${videoHash}/hqdefault.jpg" alt='${title || ''}'>
+  <a style="color: rgb(var(--primary))" href=https://www.youtube.com/embed/$${videoHash}?autoplay=1>
+    <img class="thumbnail" src="https://img.youtube.com/vi/$${videoHash}/hqdefault.jpg" alt='${title || ''}'>
     <img class="play" src="${playIcon}" alt="Play the video">
   </a>`;
   return (
@@ -67,7 +64,7 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
   );
 }
 
-function extractVideoHashFromUrl(url: string) {
+function extractVideoHashFromUrl(url) { // Removed type annotation ': string'
   const videoHashQueryParamKey = 'v';
   const searchParams = new URL(url).search;
   return new URLSearchParams(searchParams).getAll(videoHashQueryParamKey);

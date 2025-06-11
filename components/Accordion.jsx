@@ -1,17 +1,15 @@
-import { PropsWithChildren, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Collapse from './Collapse';
 import RichText from './RichText';
 
-interface AccordionProps {
-  title: string;
-  isOpen?: boolean;
-}
+// Removed: interface AccordionProps {} as it's TypeScript-specific
 
-export default function Accordion({ title, isOpen, children }: PropsWithChildren<AccordionProps>) {
+export default function Accordion({ title, isOpen, children }) { // Removed type annotation `PropsWithChildren<AccordionProps>`
   const [hasCollapsed, setHasCollapsed] = useState(!isOpen);
   const isActive = !hasCollapsed;
+
   return (
     <AccordionWrapper onClick={() => setHasCollapsed((prev) => !prev)}>
       <TitleWrapper>
@@ -53,7 +51,8 @@ const TitleWrapper = styled.div`
   align-items: center;
 `;
 
-const Icon = styled.div<{ isActive: boolean }>`
+// Type annotation removed: <{ isActive: boolean }>
+const Icon = styled.div`
   width: 2.4rem;
   transition: transform 0.3s;
   transform: rotateZ(${(p) => (p.isActive ? 180 : 0)}deg);

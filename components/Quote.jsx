@@ -1,16 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface QuoteProps {
-  content: string;
-  author: string;
-  cite: string;
-}
-
-export default function Quote({ content, author, cite }: QuoteProps) {
+export default function Quote({ content, author, cite }) {
   return (
     <Container>
-      <Blockquote {...(cite && { cite })}>{content}</Blockquote>
+      <Blockquote {...(cite ? { cite } : {})}>{content}</Blockquote>
       <Caption>— {author}</Caption>
     </Container>
   );
@@ -19,7 +13,7 @@ export default function Quote({ content, author, cite }: QuoteProps) {
 const Container = styled.figure`
   border-left: 1px solid rgb(var(--secondary));
   padding: 3rem;
-  quotes: ${`"\\201c" "\\201d" "\\2018" "\\2019"`};
+  quotes: "\\201c" "\\201d" "\\2018" "\\2019";
   color: rgb(var(--secondary));
   margin-bottom: 3.7rem;
 

@@ -1,17 +1,8 @@
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
+import Highlight, { defaultProps } from 'prism-react-renderer';
 import React from 'react';
 import styled from 'styled-components';
 import ClientOnly from 'components/ClientOnly';
 import { useClipboard } from 'hooks/useClipboard';
-
-export interface CodeProps {
-  code: string;
-  language?: Language;
-  selectedLines?: number[];
-  withCopyButton?: boolean;
-  withLineNumbers?: boolean;
-  caption?: string;
-}
 
 export default function Code({
   code,
@@ -20,12 +11,12 @@ export default function Code({
   withCopyButton = true,
   withLineNumbers,
   caption,
-}: CodeProps) {
+}) {
   const { copy, copied } = useClipboard({
     copiedTimeout: 600,
   });
 
-  function handleCopyClick(code: string) {
+  function handleCopyClick(code) {
     copy(code);
   }
 
@@ -49,10 +40,10 @@ export default function Code({
                   const lineNumber = i + 1;
                   const isSelected = selectedLines.includes(lineNumber);
                   const lineProps = getLineProps({ line, key: i });
-                  const className = lineProps.className + (isSelected ? ' selected-line' : '');
+                  const lineClassName = lineProps.className + (isSelected ? ' selected-line' : '');
 
                   return (
-                    <Line key={i} {...{ ...lineProps, className }}>
+                    <Line key={i} {...lineProps} className={lineClassName}>
                       {withLineNumbers && <LineNo>{lineNumber}</LineNo>}
                       <LineContent>
                         {line.map((token, key) => (
@@ -78,7 +69,7 @@ function CopyIcon() {
       <path
         fill="currentColor"
         d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
-      ></path>
+      />
     </svg>
   );
 }
@@ -90,7 +81,7 @@ const Caption = styled.small`
   font-size: 1.2rem;
 `;
 
-const CopyButton = styled.button<{ copied: boolean }>`
+const CopyButton = styled.button`
   position: absolute;
   border: none;
   top: 2.4rem;
@@ -109,7 +100,7 @@ const CopyButton = styled.button<{ copied: boolean }>`
   &::after {
     position: absolute;
     content: 'Copied';
-    visibility: ${(p) => (p.copied ? 'visible' : 'hidden')};
+    visibility: ${(props) => (props.copied ? 'visible' : 'hidden')};
     top: 0;
     left: -4rem;
     height: 3rem;
@@ -127,7 +118,7 @@ const CopyButton = styled.button<{ copied: boolean }>`
   }
 `;
 
-const CodeWrapper = styled.div<{ language: string }>`
+const CodeWrapper = styled.div`
   position: relative;
   border-radius: 0.3em;
   margin-top: 4.5rem;
@@ -141,7 +132,7 @@ const CodeWrapper = styled.div<{ language: string }>`
   &::after {
     position: absolute;
     height: 2.2em;
-    content: '${(p) => p.language}';
+    content: '${(props) => props.language}';
     right: 2.4rem;
     padding: 1.2rem;
     top: -2em;

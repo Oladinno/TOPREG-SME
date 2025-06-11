@@ -11,28 +11,28 @@ import { media } from 'utils/media';
 const TESTIMONIALS = [
   {
     companyLogoUrl: '/testimonials/company-logo-1.svg',
-    content: `Really good. I am so pleased with this product. I didn't even need training.`,
+    content: `Aje360 has transformed the way we source products globally. What used to take weeks now takes days. The platform is intuitive, and the support is unmatched.`,
     author: {
-      name: 'Clyde Edwards',
-      title: 'Very Serious Man',
+      name: 'Chidi Nwankwo',
+      title: 'Founder, ZoboTech Nigeria',
       avatarUrl: '/testimonials/author-photo-1.jpeg',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-2.svg',
-    content: `It's really wonderful. I use saas product often. Thank You! Saas product has really helped our business.`,
+    content: `We’ve scaled faster than ever thanks to Aje360. From sourcing to delivery, everything just works — and our customers are happier too.`,
     author: {
-      name: 'Jimmy Hunter',
-      title: 'Sigma Male University Graduate',
+      name: 'Fatima Bello',
+      title: 'CEO, B-Tailor Africa',
       avatarUrl: '/testimonials/author-photo-2.jpeg',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-3.svg',
-    content: `Since I invested in saas product I made over 100,000 dollars profits. It really saves me time and effort. saas product is exactly what our business has been lacking.`,
+    content: `Aje360 gave us the confidence to compete globally. It's more than a marketplace — it’s a growth partner for any African brand with a vision.`,
     author: {
-      name: 'Marjorie Morgan',
-      title: 'Chief Chad Officer',
+      name: 'Tunde Martins',
+      title: 'Co-Founder, AfroEssence Ltd.',
       avatarUrl: '/testimonials/author-photo-3.jpeg',
     },
   },

@@ -1,18 +1,8 @@
 import Head from 'next/head';
 import { jsonLdScriptProps } from 'react-schemaorg';
-import { TechArticle, WebSite } from 'schema-dts';
 import { EnvVars } from 'env';
 
-interface StructuredDataHeadProps {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  tags: string;
-  author: string;
-}
-
-export default function StructuredDataHead(props: StructuredDataHeadProps) {
+export default function StructuredDataHead(props) {
   const { slug, title, date, description, tags, author } = props;
 
   const currentSiteUrl = EnvVars.URL + 'blog/' + slug;
@@ -23,7 +13,7 @@ export default function StructuredDataHead(props: StructuredDataHeadProps) {
   return (
     <Head>
       <script
-        {...jsonLdScriptProps<TechArticle>({
+        {...jsonLdScriptProps({
           '@context': 'https://schema.org',
           '@type': 'TechArticle',
           mainEntityOfPage: `${currentSiteUrl}#content`,
@@ -53,7 +43,7 @@ export default function StructuredDataHead(props: StructuredDataHeadProps) {
       />
 
       <script
-        {...jsonLdScriptProps<WebSite>({
+        {...jsonLdScriptProps({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: domainName,

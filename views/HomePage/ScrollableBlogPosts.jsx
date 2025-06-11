@@ -25,7 +25,7 @@ export default function ScrollableBlogPosts({ posts }) {
       <Container>
         <Content>
           <OverTitle>features</OverTitle>
-          <SectionTitle>What are you signing in for?</SectionTitle>
+          <SectionTitle>Explore Our Powerful Features</SectionTitle>
         </Content>
       </Container>
 

@@ -2,16 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { EnvVars } from 'env';
 
-interface OpenGraphHeadProps {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  tags: string;
-  author: string;
-}
-
-export default function OpenGraphHead(props: OpenGraphHeadProps) {
+export default function OpenGraphHead(props) {
   const { slug, title, description, date, tags } = props;
 
   const currentUrl = EnvVars.URL + 'blog/' + slug;

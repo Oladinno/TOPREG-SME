@@ -1,17 +1,11 @@
-import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Button from './Button';
 import RichText from './RichText';
 
-interface PricingCardProps {
-  title: string;
-  description: string;
-  benefits: string[];
-  isOutlined?: boolean;
-}
+// Removed: interface PricingCardProps { ... } as it's TypeScript-specific
 
-export default function PricingCard({ title, description, benefits, isOutlined, children }: PropsWithChildren<PricingCardProps>) {
+export default function PricingCard({ title, description, benefits, isOutlined, children }) { // Removed type annotation
   const isAnyBenefitPresent = benefits?.length;
 
   return (
@@ -35,7 +29,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
   );
 }
 
-const Wrapper = styled.div<{ isOutlined?: boolean }>`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3rem;

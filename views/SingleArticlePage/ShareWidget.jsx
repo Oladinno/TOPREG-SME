@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import { EnvVars } from 'env';
 import { media } from 'utils/media';
 
-interface ShareWidgetProps {
-  title: string;
-  slug: string;
-}
-
-export default function ShareWidget({ title, slug }: ShareWidgetProps) {
+export default function ShareWidget({ title, slug }) {
   const shareMessage = 'New article: ' + title;
   const currentUrl = EnvVars.URL + 'blog/' + slug;
 

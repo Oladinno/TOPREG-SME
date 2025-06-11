@@ -6,11 +6,7 @@ import Input from 'components/Input';
 import { media } from 'utils/media';
 import MailSentState from '../../components/MailSentState';
 
-interface EmailPayload {
-  name: string;
-  email: string;
-  description: string;
-}
+// Removed: interface EmailPayload { ... } as it's TypeScript-specific
 
 export default function FormSection() {
   const [hasSuccessfullySentMail, setHasSuccessfullySentMail] = useState(false);
@@ -18,7 +14,8 @@ export default function FormSection() {
   const { register, handleSubmit, formState } = useForm();
   const { isSubmitSuccessful, isSubmitting, isSubmitted, errors } = formState;
 
-  async function onSubmit(payload: EmailPayload) {
+  // Removed type annotation for payload: EmailPayload
+  async function onSubmit(payload) {
     try {
       const res = await fetch('/api/sendEmail', {
         method: 'POST',
