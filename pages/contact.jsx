@@ -6,7 +6,10 @@ import InformationSection from 'views/ContactPage/InformationSection';
 
 export default function ContactPage() {
   return (
-    <Page title="Contact" description="Minim sint aliquip nostrud excepteur cupidatat amet do laborum exercitation cupidatat ea proident.">
+    <Page 
+      title="Contact Aje360" 
+      description="Connect with Aje360 — Africa’s trusted engine for SME growth. We're here to support entrepreneurs with reliable tools that help scale their businesses."
+    >
       <ContactContainer>
         <InformationSection />
         <FormSection />
@@ -17,8 +20,10 @@ export default function ContactPage() {
 
 const ContactContainer = styled.div`
   display: flex;
+  gap: 4rem;
 
   ${media('<=tablet')} {
     flex-direction: column;
+    gap: 2rem;
   }
 `;

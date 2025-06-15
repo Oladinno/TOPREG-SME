@@ -6,7 +6,10 @@ import SectionTitle from 'components/SectionTitle';
 
 export default function PricingTablesSection() {
   return (
+    <>
+    {/*
     <Wrapper>
+    
       <SectionTitle>Flexible pricing for agile teams</SectionTitle>
       <AutofitGrid>
         <PricingCard
@@ -40,8 +43,11 @@ export default function PricingTablesSection() {
           $79<span>/month</span>
         </PricingCard>
       </AutofitGrid>
+        
     </Wrapper>
-  );
+    */} 
+    </>
+);
 }
 
 const Wrapper = styled.div`

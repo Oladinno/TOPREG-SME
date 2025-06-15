@@ -6,33 +6,32 @@ export default function FaqSection() {
   return (
     <Wrapper>
       <SectionTitle>Frequently asked question</SectionTitle>
-      <Accordion title="Eiusmod eu laboris qui minim incididunt et id in elit veniam Lorem nulla ullamco.">
-        Voluptate ad aliquip in adipisicing incididunt officia. Aliqua consectetur id commodo fugiat sunt dolor minim. Aliqua ut deserunt
-        sit irure tempor esse labore elit commodo pariatur in nisi minim culpa. Exercitation eu in mollit tempor cillum excepteur
-        adipisicing cillum do et dolor est deserunt dolor. Deserunt reprehenderit nulla commodo quis et consectetur deserunt ea eiusmod
-        reprehenderit aliqua. Cupidatat commodo do ad ullamco ad enim sint sint irure amet culpa. Consequat sit Lorem sint culpa.
+      <Accordion title="What is Aje360 and how does it help my business?">
+        Aje360 is dedicated to empowering African SMEs with innovative, reliable, and relevant software tools. We help businesses like yours to scale by simplifying critical operations such as invoicing, financial management, and corporate compliance (CAC services), enabling you to operate with clarity, confidence, and control.
       </Accordion>
-      <Accordion title="Minim eiusmod aliquip in ea mollit fugiat ullamco veniam enim sint exercitation.">
-        Lorem laboris ullamco labore consectetur duis amet excepteur esse labore sunt pariatur do aliqua amet. Enim exercitation labore
-        nostrud consectetur veniam eiusmod pariatur do commodo dolore pariatur amet veniam. Irure do et ut dolor quis reprehenderit anim
-        aute sint deserunt tempor sunt nostrud. Deserunt et aute non dolor.
+
+      <Accordion title="What is Ajé Invoicer and how can it benefit me?">
+        Ajé Invoicer is a powerful mobile application that allows you to create, manage, and track professional invoices in just three easy steps. It helps you get paid faster, maintain organized financial records, and present a professional image to your clients, all from your smartphone.
       </Accordion>
-      <Accordion title="Commodo officia dolore anim occaecat.">
-        Enim ea cillum pariatur incididunt incididunt sunt ea exercitation nisi aliquip. Cillum deserunt ut esse Lorem non qui labore labore
-        eiusmod magna incididunt ut quis. Nulla excepteur adipisicing ipsum do non occaecat.
+
+      <Accordion title="What is CompanyBuddy and how does it simplify CAC services?">
+        CompanyBuddy is your personal guide to all things corporate compliance in Nigeria. It's a mobile app that puts Corporate Affairs Commission (CAC) services at your fingertips, allowing you to easily navigate CAC registration, SCUML registration, and even chat directly with an agent for personalized support. It simplifies complex processes, saving you time and effort.
       </Accordion>
-      <Accordion title="Irure Lorem proident esse enim.">
-        Ipsum laboris sit minim occaecat nisi qui. Tempor eiusmod fugiat occaecat labore. Exercitation do cillum cillum laborum velit
-        laborum ea magna duis laborum in anim. Enim laboris dolore laboris consectetur enim duis deserunt consequat excepteur ipsum
-        excepteur. Non dolor magna et est cillum sint eiusmod sit eiusmod veniam id. Aliqua non non labore amet laborum fugiat ad nostrud ex
-        officia exercitation.
+
+      <Accordion title="Is Aje360 suitable for small businesses and startups?">
+        Absolutely! Our tools are designed for all entrepreneurs, from roadside vendors to growing startups. We focus on providing simple but powerful software solutions that are accessible and easy to use, regardless of your business size or technical expertise. Our goal is to ensure no business is left behind.
       </Accordion>
-      <Accordion title="Ea quis consequat sunt sint aute pariatur aliquip minim voluptate.">
-        Sint eiusmod aute nulla ut esse sunt fugiat nulla exercitation duis pariatur. Magna anim incididunt magna id quis irure laborum sint
-        voluptate tempor esse elit dolore. Elit exercitation pariatur adipisicing aute. Nisi deserunt enim consequat anim adipisicing
-        laborum sint occaecat elit. Consequat officia cupidatat magna incididunt nisi in sunt duis reprehenderit ullamco in amet cillum.
-        Dolor nisi proident ipsum aute velit aliquip magna fugiat reprehenderit. Enim ex aliqua et velit exercitation reprehenderit veniam
-        do eu exercitation ad duis.
+
+      <Accordion title="How secure is my business data with Aje360?">
+        At Aje360, data security is paramount. We employ robust security measures and encryption protocols to protect your sensitive business information, including your financial records and personal data. We are committed to maintaining the highest standards of data privacy and integrity.
+      </Accordion>
+
+      <Accordion title="How do I get started with Ajé Invoicer or CompanyBuddy?">
+        Getting started is simple! You can download the Ajé Invoicer or CompanyBuddy app from your respective app store. Follow the on-screen instructions to set up your profile and begin using the features. For any assistance, our support team is readily available through the app or our website.
+      </Accordion>
+
+      <Accordion title="What kind of support can I expect from Aje360?">
+        We are committed to your success. Our support channels include in-app chat with agents (especially for CompanyBuddy), comprehensive FAQs, and dedicated customer service. We're here to help you every step of the way, ensuring you get the most out of our tools.
       </Accordion>
     </Wrapper>
   );

@@ -12,24 +12,24 @@ const TABS = [
   {
     title: 'Instant Invoicing & Payment Tracking',
     description:
-      '<p>Create professional invoices and track payments with real-time updates. Say goodbye to lost sales and missed payments.</p>',
-    imageUrl: '/demo-illustration-3.png',
+      '<p>Create professional, branded invoices in minutes with Ajé Invoicer. Track payments in real-time, send reminders, and ensure you are always on top of your receivables. Say goodbye to manual errors and hello to consistent cash flow. </p>',
+    imageUrl: '/demo 1.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Smart Inventory & Stock Alerts',
+    title: 'Comprehensive Lifetime Invoice Tracking',
     description:
-      '<p>Manage your stock across multiple sales channels and get notified before you run out. Never miss a sale again.</p>',
-    imageUrl: '/demo-illustration-4.png',
+      '<p>Gain clear insights into your businesses financial performance. Ajé Invoicer allows you to effortlessly track your total invoiced amount, review past invoices, and manage client payment histories. Make data-backed decisions to scale your revenue. </p>',
+    imageUrl: '/demo 4.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'Real-time Business Insights',
+    title: 'Simplified Corporate Compliance (CAC Services)',
     description:
-      '<p>Get visual reports on your sales, expenses, profits, and growth — all in one dashboard. Make data-backed decisions.</p>',
-    imageUrl: '/demo-illustration-5.png',
+      '<p>Navigate Nigerian corporate regulations with ease using CompanyBuddy. From CAC registration to SCUML compliance, access essential services directly from your mobile device. Get expert support and personalized guidance to ensure your business is always compliant and thriving.</p>',
+    imageUrl: '/demo 5.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
