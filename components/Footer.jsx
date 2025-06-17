@@ -52,14 +52,15 @@ export default function Footer() {
         </ListContainer>
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a><TwitterIcon size={50} round={true} /></a>
+            {/* Fix 1: Removed <a> and passHref for external links */}
+            <NextLink href="https://www.twitter.com/my-saas-startup" target="_blank" rel="noopener noreferrer">
+              <TwitterIcon size={50} round={true} />
             </NextLink>
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a><FacebookIcon size={50} round={true} /></a>
+            <NextLink href="https://www.facebook.com/my-saas-startup" target="_blank" rel="noopener noreferrer">
+              <FacebookIcon size={50} round={true} />
             </NextLink>
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a><LinkedinIcon size={50} round={true} /></a>
+            <NextLink href="https://www.linkedin.com/my-saas-startup" target="_blank" rel="noopener noreferrer">
+              <LinkedinIcon size={50} round={true} />
             </NextLink>
           </ShareBar>
           <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
@@ -83,14 +84,15 @@ function FooterList({ title, items }) {
 function ListItem({ title, href }) {
   return (
     <ListItemWrapper>
-      <NextLink href={href} passHref>
-        <a>{title}</a>
+      {/* Fix 2: Removed <a> and passHref for internal links */}
+      <NextLink href={href}>
+        {title}
       </NextLink>
     </ListItemWrapper>
   );
 }
 
-// Styled Components
+// Styled Components (no changes needed here, as the issue was in the JSX structure)
 const FooterWrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 4rem;
@@ -135,6 +137,7 @@ const ListWrapper = styled.div`
 const ListItemWrapper = styled.p`
   font-size: 1.6rem;
 
+  /* This 'a' selector will now apply styles directly to the link rendered by NextLink */
   a {
     text-decoration: none;
     color: rgba(var(--textSecondary), 0.75);

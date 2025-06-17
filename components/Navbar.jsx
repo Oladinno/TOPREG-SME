@@ -62,11 +62,10 @@ export default function Navbar({ items }) {
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
-        <NextLink href="/" passHref>
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
-        </NextLink>
+        {/* CORRECTED: Pass href directly to LogoWrapper, as LogoWrapper is now a styled NextLink */}
+        <LogoWrapper href="/">
+          <Logo />
+        </LogoWrapper>
         <NavItemList>
           {items.map((singleItem) => (
             <NavItem key={singleItem.href} {...singleItem} />
@@ -96,8 +95,9 @@ function NavItem({ href, title, outlined }) {
 
   return (
     <NavItemWrapper outlined={outlined}>
-      <NextLink href={href} passHref>
-        <a>{title}</a>
+      {/* Corrected: Removed passHref, title content is directly inside NextLink */}
+      <NextLink href={href}>
+        {title}
       </NextLink>
     </NavItemWrapper>
   );
@@ -123,7 +123,8 @@ const HamburgerMenuWrapper = styled.div`
   }
 `;
 
-const LogoWrapper = styled.a`
+// LogoWrapper is correctly styled(NextLink)
+const LogoWrapper = styled(NextLink)`
   display: flex;
   margin-right: auto;
   text-decoration: none;
@@ -143,6 +144,7 @@ const NavItemWrapper = styled.li`
     transition: background-color 0.2s;
   }
 
+  /* This 'a' selector will now apply styles directly to the link rendered by NextLink */
   a {
     display: flex;
     color: ${(p) =>
