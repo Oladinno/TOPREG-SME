@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 import { media } from 'utils/media';
+import PropTypes from 'prop-types';
 
 export default function ArticleCard({ title, slug, imageUrl, description }) {
   if (typeof imageUrl !== 'string' || imageUrl.trim() === '') {

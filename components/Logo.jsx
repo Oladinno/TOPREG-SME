@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Logo({ ...rest }) {
   return (
     <div {...rest}>
@@ -28,12 +30,7 @@ export default function Logo({ ...rest }) {
 
 */}
 
-    <img src="/Aje Logo.png" alt="Your Company Logo" width={100} height={70} />
+      <Image src="/Aje Logo.png" alt="Your Company Logo" width={100} height={70} />
     </div>
-    
- 
-     
-      
-    
   );
-};
+}

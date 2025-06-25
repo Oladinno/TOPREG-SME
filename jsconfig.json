@@ -5,7 +5,11 @@
     "paths": {
       "components/*": ["components/*"],
       "utils/*": ["utils/*"],
-      "contexts/*": ["contexts/*"]
+      "contexts/*": ["contexts/*"],
+      "views/*": ["views/*"],
+      "hooks/*": ["hooks/*"],
+      "env": ["env.js"],
+      "types": ["types.js"]
     }
   }
 }

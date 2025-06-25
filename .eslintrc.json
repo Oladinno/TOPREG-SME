@@ -17,6 +17,14 @@
   "parserOptions": {
     "sourceType": "module"
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [".", "./components", "./utils", "./contexts", "./views", "./hooks"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,

@@ -16,29 +16,29 @@ export const GlobalStyle = createGlobalStyle`
   --secondBackground: 255,255,255;
   --text: 10,18,30;
   --textSecondary: 255,255,255;
-  --primary: 22,115,255; 
-  --secondary: 10,18,30;
-  --tertiary: 231,241,251;
+  --primary: 255,215,0; 
+  --secondary: 0,0,0;
+  --tertiary: 50,50,50;
   --cardBackground: 255,255,255;
   --inputBackground: 255,255,255;
   --navbarBackground: 255,255,255;
   --modalBackground: 251,251,253;
   --errorColor: 207,34,46;
-  --logoColor: #243A5A;
+  --logoColor: #000000;
 }
 
 .next-dark-theme {
-  --background: 26,32,44;
-  --secondBackground: 45,55,72;
-  --text: 237,237,238;
+  --background: 0,0,0;
+  --secondBackground: 20,20,20;
+  --text: 255,255,255;
   --textSecondary: 255,255,255;
-  --primary: 22,115,255; 
-  --secondary: 10,18,30;
-  --tertiary: 231,241,251;
-  --cardBackground: 45,55,72;
-  --inputBackground: 45,55,72;
-  --navbarBackground: 45,55,72;
-  --modalBackground: 26,32,44;
+  --primary: 255,215,0; 
+  --secondary: 20,20,20;
+  --tertiary: 40,40,40;
+  --cardBackground: 20,20,20;
+  --inputBackground: 30,30,30;
+  --navbarBackground: 0,0,0;
+  --modalBackground: 0,0,0;
   --errorColor: 207,34,46;
   --logoColor: #fff;
 }

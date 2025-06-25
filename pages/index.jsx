@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
-import Link from 'components/Link';
-import { EnvVars } from 'env';
 import { getAllPosts } from 'utils/postsFetcher';
 import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
@@ -16,7 +14,7 @@ export default function Homepage({ posts }) {
   return (
     <>
       <Head>
-        <title>Aje 360 | Empowering Africa's Entrepreneurs </title>
+        <title>Aje 360 | Empowering Africa&apos;s Entrepreneurs</title>
         <meta
           name="description"
           content="Aje 360 – powerful tools for African SMEs to thrive with clarity, confidence, and control."
@@ -28,22 +26,19 @@ export default function Homepage({ posts }) {
           <Partners />
 
           {/* Vision Statement Section */}
-<BasicSection
-  imageUrl="/demo-illustration-1.svg"
-  title="Empowering African Entrepreneurs"
-  overTitle="Our Vision"
->
-  {/* The content below will be passed as 'children' to BasicSection */}
-  At <strong>Aje 360</strong>, we are committed to building bold, reliable, and relevant tools that empower entrepreneurs
-  across Africa to scale their businesses with clarity, confidence, and control.
-  <br /><br />
-  We imagine a continent where no business is left behind — from the roadside vendor to the rising startup,
-  every entrepreneur deserves access to simple yet powerful tools that make them operate like global players.
-</BasicSection> {/* <-- Corrected: This now properly closes BasicSection */}
+          <BasicSection
+            imageUrl="/demo-illustration-1.svg"
+            title="Empowering African Entrepreneurs"
+            overTitle="Our Vision"
+          >
+            At <strong>Aje 360</strong>, we are committed to building bold, reliable, and relevant tools that empower
+            entrepreneurs across Africa to scale their businesses with clarity, confidence, and control.
+            <br /><br />
+            We imagine a continent where no business is left behind — from the roadside vendor to the rising startup,
+            every entrepreneur deserves access to simple yet powerful tools that make them operate like global players.
+          </BasicSection>
 
-  
-
-         {/* Value Proposition Section */}
+          {/* Value Proposition Section */}
           <BasicSection
             imageUrl="/demo-illustration-2.svg"
             title="Why Aje 360?"
@@ -51,9 +46,8 @@ export default function Homepage({ posts }) {
             reversed
           >
             <p>
-               We don't just help African businesses survive — we help them thrive. Our platform is designed to equip you with 
-              the systems and confidence to manage your operations like a pro.
-
+              We don&apos;t just help African businesses survive — we help them thrive. Our platform is designed to
+              equip you with the systems and confidence to manage your operations like a pro.
             </p>
             <ul>
               <li><strong>Smart Invoicing</strong> — Create and track invoices effortlessly.</li>

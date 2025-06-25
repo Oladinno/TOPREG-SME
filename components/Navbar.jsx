@@ -5,12 +5,13 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { useScrollPosition } from 'hooks/useScrollPosition';
+import { media } from 'utils/media';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
 import Logo from './Logo';
-import { media } from 'utils/media';
+
 
 const ColorSwitcher = dynamic(() => import('./ColorSwitcher'), { ssr: false });
 
