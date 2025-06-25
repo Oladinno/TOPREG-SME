@@ -56,7 +56,7 @@ export default function SingleArticlePage(props) {
   const { title, description, date, tags, imageUrl } = data.getPostsDocument.data;
   const meta = { title, description, date, tags, imageUrl, author: '' };
   const formattedDate = formatDate(new Date(date));
-  const absoluteImageUrl = imageUrl.replace(/\/+/, '/');
+const absoluteImageUrl = (imageUrl || '').replace(new RegExp('/+'), '/');
 
   return (
     <>
@@ -78,36 +78,39 @@ export default function SingleArticlePage(props) {
 }
 
 export async function getStaticPaths() {
-  const postsListData = await staticRequest({
-    query: `
-      query PostsSlugs {
-        getPostsList {
-          edges {
-            node {
-              sys {
-                basename
+  try {
+    const postsListData = await staticRequest({
+      query: `
+        query PostsSlugs {
+          getPostsList {
+            edges {
+              node {
+                sys {
+                  basename
+                }
               }
             }
           }
         }
-      }
-    `,
-    variables: {},
-  });
+      `,
+      variables: {},
+    });
 
-  if (!postsListData) {
+    const edges = postsListData?.getPostsList?.edges || [];
+
+    return {
+      paths: edges.map((edge) => ({
+        params: { slug: normalizePostName(edge.node.sys.basename) },
+      })),
+      fallback: false,
+    };
+  } catch (err) {
+    console.warn('⚠️ No blog posts found or query failed:', err);
     return {
       paths: [],
       fallback: false,
     };
   }
-
-  return {
-    paths: postsListData.getPostsList.edges.map((edge) => ({
-      params: { slug: normalizePostName(edge.node.sys.basename) },
-    })),
-    fallback: false,
-  };
 }
 
 function normalizePostName(postName) {
@@ -115,33 +118,40 @@ function normalizePostName(postName) {
 }
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const variables = { relativePath: `${slug}.mdx` };
+  try {
+    const { slug } = params;
+    const variables = { relativePath: `${slug}.mdx` };
 
-  const query = `
-    query BlogPostQuery($relativePath: String!) {
-      getPostsDocument(relativePath: $relativePath) {
-        data {
-          title
-          description
-          date
-          tags
-          imageUrl
-          body
+    const query = `
+      query BlogPostQuery($relativePath: String!) {
+        getPostsDocument(relativePath: $relativePath) {
+          data {
+            title
+            description
+            date
+            tags
+            imageUrl
+            body
+          }
         }
       }
+    `;
+
+    const data = await staticRequest({ query, variables });
+
+    if (!data?.getPostsDocument) {
+      return { notFound: true };
     }
-  `;
 
-  const data = await staticRequest({
-    query,
-    variables,
-  });
-
-  return {
-    props: { slug, variables, query, data },
-  };
+    return {
+      props: { slug, variables, query, data },
+    };
+  } catch (err) {
+    console.warn('⚠️ Blog post not found:', err);
+    return { notFound: true };
+  }
 }
+
 
 const CustomContainer = styled(Container)`
   position: relative;
