@@ -31,11 +31,10 @@ export default function Homepage({ posts }) {
             title="Empowering African Entrepreneurs"
             overTitle="Our Vision"
           >
-            At <strong>Aje 360</strong>, we are committed to building bold, reliable, and relevant tools that empower
-            entrepreneurs across Africa to scale their businesses with clarity, confidence, and control.
+           From invoicing, to sales and customer management, to inventory, finances, growth tracking, operations & management,  <strong> AJE360</strong> equips you with everything to run and grow your business — no manual workflows, no mundane tasks, just smart, AI-powered automation.
+
             <br /><br />
-            We imagine a continent where no business is left behind — from the roadside vendor to the rising startup,
-            every entrepreneur deserves access to simple yet powerful tools that make them operate like global players.
+            We believe in a continent where no business — especially small and medium-sized enterprises — is left behind. From the roadside vendor to the rising startup, every entrepreneur deserves simple yet powerful tools to operate and thrive like a global player.
           </BasicSection>
 
           {/* Value Proposition Section */}

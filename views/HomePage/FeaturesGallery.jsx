@@ -10,7 +10,7 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: 'Instant Invoicing & Payment Tracking',
+    title: ' AJÉ INVOICER & EXPENSE MANAGER',
     description:
       '<p>Create professional, branded invoices in minutes with Ajé Invoicer. Track payments in real-time, send reminders, and ensure you are always on top of your receivables. Say goodbye to manual errors and hello to consistent cash flow. </p>',
     imageUrl: '/demo 1.png',
@@ -26,7 +26,7 @@ const TABS = [
     secondColor: '99,172,232',
   },
   {
-    title: 'Simplified Corporate Compliance (CAC Services)',
+    title: 'COMPANY BUDDY ',
     description:
       '<p>Navigate Nigerian corporate regulations with ease using CompanyBuddy. From CAC registration to SCUML compliance, access essential services directly from your mobile device. Get expert support and personalized guidance to ensure your business is always compliant and thriving.</p>',
     imageUrl: '/demo 5.png',
@@ -77,7 +77,7 @@ export default function FeaturesGallery() {
     <FeaturesGalleryWrapper>
       <Content>
         <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        <SectionTitle>OUR AVAILABLE TOOLS</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

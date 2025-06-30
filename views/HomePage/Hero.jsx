@@ -14,11 +14,11 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>All-in-one business dashboard</CustomOverTitle>
+        <CustomOverTitle>ALL-IN-ONE BUSINESS 360 TOOLS</CustomOverTitle>
         <Heading>Grow smarter with Aje360</Heading>
         <Description>
-          From inventory tracking to customer insights, Aje360 gives you the tools you need to run and grow your business — no spreadsheets, no stress.
-
+          At AJE360, we build simple, relevant, and powerful tools to help African SMEs succeed. Our products are designed for the real challenges of entrepreneurs on this continent.
+          
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => setIsModalOpened(true)}>
