@@ -27,7 +27,7 @@ export default function Homepage({ posts }) {
 
           {/* Vision Statement Section */}
           <BasicSection
-            imageUrl="/demo-illustration-1.svg"
+            imageUrl="/demo 6.jpg"
             title="Empowering African Entrepreneurs"
             overTitle="Our Vision"
           >
@@ -50,7 +50,7 @@ export default function Homepage({ posts }) {
             </p>
             <ul>
               <li><strong>Smart Invoicing</strong> — Create and track invoices effortlessly.</li>
-              <li><strong>Expense Recording</strong> —  — Easily log and categorize all your business expenditures.</li>
+              <li><strong>Expense Recording</strong> — Easily log and categorize all your business expenditures.</li>
               <li><strong>Inventory Tools</strong> — Stay on top of your stock and supplies.</li>
               <li><strong>Business Insights</strong> — Make informed decisions with data-driven dashboards.</li>
               <li><strong>Agentic AI Integration</strong> — Leverage intelligent automation for smarter business processes.</li>

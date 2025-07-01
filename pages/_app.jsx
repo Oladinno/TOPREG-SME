@@ -18,8 +18,8 @@ import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 
 const navItems = [
-  { title: 'Awesome SaaS Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
+  { title: 'Our Apps', href: '/features' },
+//  { title: 'Pricing', href: '/pricing' },
   { title: 'Team', href: '/team' },
   { title: 'Contact', href: '/contact' },
   { title: 'Sign up', href: '/sign-up', outlined: true },

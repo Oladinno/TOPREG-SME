@@ -9,22 +9,22 @@ import { media } from 'utils/media';
 // Define team member data
 const TEAM_MEMBERS = [
   {
-    image: '/team/john-doe.jpg', // Placeholder image path, replace with actual image
-    name: 'John Doe',
+    image: 'Titcombe Obaro Ayorinde.jpg', // Placeholder image path, replace with actual image
+    name: 'Titcombe Obaro Ayorinde',
     role: 'CEO / Team Lead',
     about:
       'Visionary leader at the helm, driving strategic growth and fostering innovation. John brings years of experience in market expansion and community building, guiding our team with a clear mission.',
   },
   {
-    image: '/team/jane-smith.jpg', // Placeholder image path, replace with actual image
-    name: 'Jane Smith',
+    image: 'David Nyoung.jpg', // Placeholder image path, replace with actual image
+    name: 'David Nyoung',
     role: 'CTO',
     about:
       'Mastermind behind our robust technology stack. Jane ensures our platforms are scalable, secure, and cutting-edge, translating complex ideas into seamless digital experiences.',
   },
   {
-    image: '/team/mike-johnson.jpg', // Placeholder image path, replace with actual image
-    name: 'Mike Johnson',
+    image: 'Tobi Obaro Abiola.jpg', // Placeholder image path, replace with actual image
+    name: 'Tobi Obaro Abiola',
     role: 'CFO',
     about:
       'Overseeing all financial operations with precision and foresight. Mike is dedicated to sustainable financial health, optimizing resources and ensuring fiscal responsibility.',

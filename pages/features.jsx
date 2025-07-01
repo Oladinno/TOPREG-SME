@@ -162,19 +162,55 @@ export default function FeaturesPage() {
           </ProductDescription>
 
           <FeatureShowcase>
-            {/* COMPANY BUDDY - Main Feature */}
-            <FeatureBlock>
-              <FeatureImage src="/demo 5.png" alt="CAC Services at my finger tip!" />
-              <FeatureSubtitle>CAC Services at your fingertips!</FeatureSubtitle>
-              <FeatureDetail>
-                Streamline your business registration processes. Company Buddy provides
-                easy access to CAC Registration for new businesses, SCUML Registration for financial institutions,
-                and direct chat with expert agents for personalized guidance and support on all your compliance needs.
-              </FeatureDetail>
-            </FeatureBlock>
-            {/* Add more Company Buddy specific feature blocks if you have more images/details */}
-          </FeatureShowcase>
-        </ProductSection>
+              {/* COMPANY BUDDY - Mobile App for Companies */}
+              <FeatureBlock>
+                <FeatureImage src="/demo 8.jpg" alt="Mobile App for My Companies" />
+                <FeatureSubtitle>Mobile App for My Companies</FeatureSubtitle>
+                <FeatureDetail>
+                  Welcome to My Company Buddy – your personal guide to everything about your company. Manage multiple businesses from a single, intuitive app.
+                </FeatureDetail>
+              </FeatureBlock>
+
+              {/* COMPANY BUDDY - Create Company Portals */}
+              <FeatureBlock>
+                <FeatureImage src="/demo 10.jpg" alt="Create Company portals & Store all Details and Documents in one place!" />
+                <FeatureSubtitle>Create Company Portals & Store All Details and Documents</FeatureSubtitle>
+                <FeatureDetail>
+                  Organize all your company details and essential documents in one secure place. Create dedicated portals for each of your businesses for streamlined management.
+                </FeatureDetail>
+              </FeatureBlock>
+
+              {/* COMPANY BUDDY - CAC Services at your fingertips! */}
+              <FeatureBlock>
+                <FeatureImage src="/demo 5.png" alt="CAC Services at my finger tip!" />
+                <FeatureSubtitle>CAC Services at your fingertips!</FeatureSubtitle>
+                <FeatureDetail>
+                  Streamline your business registration processes. Company Buddy provides
+                  easy access to CAC Registration for new businesses, SCUML Registration for financial institutions,
+                  and direct chat with expert agents for personalized guidance and support on all your compliance needs.
+                </FeatureDetail>
+              </FeatureBlock>
+
+              {/* COMPANY BUDDY - Incorporate New Companies */}
+              <FeatureBlock>
+                <FeatureImage src="/demo 11.jpg" alt="Incorporate new Companies, Business names, & NGO's swiftly!" />
+                <FeatureSubtitle>Incorporate New Companies, Business Names, & NGOs Swiftly!</FeatureSubtitle>
+                <FeatureDetail>
+                  Register new limited liability companies, business names, and incorporated trustees directly through the app, saving you time and hassle.
+                </FeatureDetail>
+              </FeatureBlock>
+
+              {/* COMPANY BUDDY - Submit Preferred Company Names */}
+              <FeatureBlock>
+                <FeatureImage src="/demo 7.jpg" alt="Submit preferred Company Names & Incorporation details swiftly!" />
+                <FeatureSubtitle>Submit Preferred Company Names & Incorporation Details Swiftly!</FeatureSubtitle>
+                <FeatureDetail>
+                  Easily submit your preferred company names and all necessary incorporation details, guiding you through each step of the registration process.
+                </FeatureDetail>
+              </FeatureBlock>
+
+            </FeatureShowcase>
+          </ProductSection>
 
 
       </Wrapper>

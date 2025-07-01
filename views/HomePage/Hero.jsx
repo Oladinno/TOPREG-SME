@@ -21,9 +21,7 @@ export default function Hero() {
           
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Get Early Access <span>&rarr;</span>
-          </Button>
+          
           <NextLink href="#whitepaper" passHref>
             <Button transparent>
               Features <span>&rarr;</span>

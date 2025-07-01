@@ -19,11 +19,6 @@ export default function Cta() {
             Track sales, manage inventory, and make smarter decisions — all from one powerful, easy-to-use dashboard. Join hundreds of business owners building better businesses.
           </Description>
           <ButtonGroup>
-            <NextLink href="#early-access" passHref>
-              <Button>
-                Get Early Access <span>&rarr;</span>
-              </Button>
-            </NextLink>
             <NextLink href="#whitepaper" passHref>
               <OutlinedButton transparent>
                 Features <span>&rarr;</span>
@@ -64,6 +59,7 @@ const Stack = styled.div`
     }
   }
 `;
+
 
 const OutlinedButton = styled(Button)`
   border: 1px solid rgb(var(--textSecondary));

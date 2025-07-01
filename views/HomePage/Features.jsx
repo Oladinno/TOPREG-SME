@@ -26,7 +26,7 @@ const FEATURES = [
   },
   {
     imageUrl: '/grid-icons/asset-4.svg',
-    title: 'Customer Management',
+    title: 'Business Management',
     description:
       'Easily manage customer details, history, and communication — build trust and repeat business.',
   },
