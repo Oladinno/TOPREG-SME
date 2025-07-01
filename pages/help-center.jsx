@@ -26,8 +26,8 @@ export default function HelpCenterPage() {
           <SectionTitle>Contact Support</SectionTitle>
           <ContactContent>
             <p>
-              Can't find what you're looking for in our FAQs? Our dedicated support team is here to help you thrive.
-              Reach out to us through the following channels:
+              Can&apos;t find what you&apos;re looking for? Our dedicated support team is here to help you thrive.
+            Reach out to us through the following channels:
             </p>
             <ContactDetails>
               <div>
