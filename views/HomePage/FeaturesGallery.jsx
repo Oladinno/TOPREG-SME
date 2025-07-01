@@ -17,14 +17,14 @@ const TABS = [
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
-  {
+  /*{
     title: 'Comprehensive Lifetime Invoice Tracking',
     description:
       '<p>Gain clear insights into your businesses financial performance. Ajé Invoicer allows you to effortlessly track your total invoiced amount, review past invoices, and manage client payment histories. Make data-backed decisions to scale your revenue. </p>',
     imageUrl: '/demo 4.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
-  },
+  },*/
   {
     title: 'COMPANY BUDDY ',
     description:

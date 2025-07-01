@@ -20,6 +20,7 @@ import { NewsletterModalContextProvider, useNewsletterModalContext } from 'conte
 const navItems = [
   { title: 'Awesome SaaS Features', href: '/features' },
   { title: 'Pricing', href: '/pricing' },
+  { title: 'Team', href: '/team' },
   { title: 'Contact', href: '/contact' },
   { title: 'Sign up', href: '/sign-up', outlined: true },
 ];
