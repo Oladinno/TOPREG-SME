@@ -1,13 +1,15 @@
-// HeroIllustration.js or similar
+// ./components/HeroIllustration.jsx
 import React from 'react';
+import NextImage from 'next/image'; // <-- Import NextImage
 
 const HeroIllustration = () => {
   return (
     <div className="hero-illustration-container">
-      <img
-        src="/home1.jpg" // Path to your image in the public folder
-        alt="Hero Image" // Provide a meaningful alt text for accessibility
-        className="hero-image" // Add any necessary styling classes
+      <NextImage // <-- Replaced <img> with NextImage
+        src="/home1.jpg"
+        alt="Stylized illustration for the hero section of the website" // <-- Improved alt text
+        width={1000}
+        height={400} // <-- Set appropriate width and height
       />
     </div>
   );

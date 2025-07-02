@@ -78,6 +78,13 @@ export default function FeaturesPage() {
             <source src="/video.mp4" type="video/mp4" /> {/* Adjust filename and type */}
             {/* Add other source types for wider browser compatibility if you have them */}
             {/* <source src="/my_feature_video.webm" type="video/webm" /> */}
+            <track
+              src="/videos/video-captions.vtt" // IMPORTANT: You need to create this .vtt file
+              kind="captions"
+              srcLang="en"
+              label="English"
+              default // Add 'default' if these are the primary captions
+            />
             Your browser does not support the video tag.
           </video>
         </VideoContainer>
