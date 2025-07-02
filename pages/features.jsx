@@ -3,7 +3,7 @@ import AutofitGrid from 'components/AutofitGrid';
 import BasicCard from 'components/BasicCard';
 import Page from 'components/Page';
 import SectionTitle from 'components/SectionTitle';
-import YoutubeVideo from 'components/YoutubeVideo';
+//import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
 
 
@@ -72,7 +72,16 @@ export default function FeaturesPage() {
     <Page title="Features" description="Explore the powerful tools Aje360 offers to help African businesses thrive.">
       <Wrapper>
         <SectionTitle>Explore What Aje360 Can Do For You</SectionTitle>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" />
+        {/* <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" /> */}
+        <VideoContainer>
+          <video controls preload="metadata" > 
+            <source src="/video.mp4" type="video/mp4" /> {/* Adjust filename and type */}
+            {/* Add other source types for wider browser compatibility if you have them */}
+            {/* <source src="/my_feature_video.webm" type="video/webm" /> */}
+            Your browser does not support the video tag.
+          </video>
+        </VideoContainer>
+
         {/* Commented out the CustomAutofitGrid that renders the features */}
         {/*
         <CustomAutofitGrid>
@@ -320,4 +329,26 @@ const FeatureDetail = styled.p`
   color: rgba(255, 255, 255, 0.8); /* Kept light for contrast on the dark FeatureBlock background */
   line-height: 1.6;
   margin-bottom: 1rem;
+`;
+
+const VideoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px; /* Max width for your video */
+  margin: 5rem auto; /* Center the video and add vertical space */
+  border-radius: 8px; /* Match your other rounded elements */
+  overflow: hidden; /* Ensures video corners are rounded */
+
+  video {
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove extra space below video */
+    border-radius: 8px; /* Apply border-radius to the video itself */
+  }
+
+  ${media('<=tablet')} {
+    margin: 3rem auto;
+  }
 `;

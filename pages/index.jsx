@@ -39,7 +39,7 @@ export default function Homepage({ posts }) {
 
           {/* Value Proposition Section */}
           <BasicSection
-            imageUrl="/demo-illustration-2.svg"
+            imageUrl="/home2.jpg"
             title="Why Aje 360?"
             overTitle="Built for Growth"
             reversed

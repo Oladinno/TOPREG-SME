@@ -30,36 +30,6 @@ const FEATURES = [
     description:
       'Easily manage customer details, history, and communication — build trust and repeat business.',
   },
-  {
-    imageUrl: '/grid-icons/asset-5.svg',
-    title: 'Business Insights',
-    description:
-      'Turn data into decisions. View clear reports and analytics that help you grow confidently and strategically.',
-  },
-  {
-    imageUrl: '/grid-icons/asset-6.svg',
-    title: 'Mobile First',
-    description:
-      'Access your business tools on any device. Aje360 is built to work wherever you are — office, market, or on-the-go.',
-  },
-  {
-    imageUrl: '/grid-icons/asset-7.svg',
-    title: 'Cloud Security',
-    description:
-      'Your business data is backed up and secure in the cloud. Access it safely from anywhere, anytime.',
-  },
-  {
-    imageUrl: '/grid-icons/asset-8.svg',
-    title: 'Local Language Support',
-    description:
-      'Run your business in your preferred language — English, Pidgin, Yoruba, Hausa, and more (coming soon).',
-  },
-  {
-    imageUrl: '/grid-icons/asset-9.svg',
-    title: 'Affordable & Flexible',
-    description:
-      'Whether you’re just starting out or scaling up, Aje360 offers affordable plans that grow with you.',
-  },
 ];
 
 export default function Features() {

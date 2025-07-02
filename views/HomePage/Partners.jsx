@@ -7,13 +7,8 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'logoipsum-logo-1.svg',
-  'logoipsum-logo-2.svg',
-  'logoipsum-logo-3.svg',
-  'logoipsum-logo-4.svg',
-  'logoipsum-logo-5.svg',
-  'logoipsum-logo-6.svg',
-  'logoipsum-logo-7.svg',
+  'partner1.jpg',
+  'partner2.jpg',
 ];
 
 export default function Partners() {
@@ -45,8 +40,8 @@ export default function Partners() {
             <NextImage
               src={'/partners/' + logo}
               alt={normalizePartnerLogoName(logo)}
-              width={128}
-              height={128}
+              width={800}
+              height={100}
             />
           </SwiperSlide>
         ))}
@@ -56,7 +51,7 @@ export default function Partners() {
 }
 
 function normalizePartnerLogoName(logo) {
-  return logo.replace('.svg', '');
+  return logo.replace('.jpg', '');
 }
 
 const Title = styled.h3`
@@ -66,7 +61,7 @@ const Title = styled.h3`
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
-  opacity: 0.8;
+  opacity: 1;
 
   ${media('<=desktop')} {
     line-height: 1.5;
