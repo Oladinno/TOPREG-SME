@@ -9,6 +9,15 @@ import { media } from 'utils/media';
 const PARTNER_LOGOS = [
   'partner1.jpg',
   'partner2.jpg',
+  'partner3.jpg',
+  'partner4.jpg',
+  'partner5.jpg',
+  'partner6.jpg',
+  'partner7.jpg',
+  'partner8.jpg',
+  'partner9.jpg',
+  'partner10.jpg',
+  'partner11.jpg',
 ];
 
 export default function Partners() {
@@ -29,19 +38,22 @@ export default function Partners() {
         }}
         speed={3000}
         breakpoints={{
-          320: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1025: { slidesPerView: 6 },
+           320: { slidesPerView: 2, spaceBetween: 15 }, // Adjusted space for smaller screens
+          768: { slidesPerView: 4, spaceBetween: 20 },
+          1025: { slidesPerView: 6, spaceBetween: 30 },
         }}
-        className="swiper-wrapper"
+        
       >
         {PARTNER_LOGOS.map((logo) => (
           <SwiperSlide key={logo}>
             <NextImage
               src={'/partners/' + logo}
               alt={normalizePartnerLogoName(logo)}
-              width={800}
-              height={100}
+               width={180} // Example: a typical logo width
+              height={90} // Example: a typical logo height
+              objectFit="contain"
+              className="partner-logo-image"
+              
             />
           </SwiperSlide>
         ))}
