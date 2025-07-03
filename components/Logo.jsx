@@ -30,7 +30,7 @@ export default function Logo({ ...rest }) {
 
 */}
 
-      <Image src="/Aje Logo.png" alt="Your Company Logo" width={100} height={70} />
+      <Image src="/Aje Logo1.jpg" alt="Your Company Logo" width={100} height={70} />
     </div>
   );
 }
