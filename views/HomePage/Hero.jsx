@@ -14,11 +14,10 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>ALL-IN-ONE BUSINESS 360 TOOLS</CustomOverTitle>
-        <Heading>Grow smarter with Aje360</Heading>
+        <CustomOverTitle>TOPREG SME</CustomOverTitle>
+        <Heading>We turn Nigerian hustles into structured and scalable businesses.</Heading>
         <Description>
-          At AJE360, we build simple, relevant, and powerful tools to help African SMEs succeed. Our products are designed for the real challenges of entrepreneurs on this continent.
-          
+          Whether you're just starting out or ready to grow big, TOPREG helps you register right, build smart, and scale strong — with the tools, resources, legal and business guidance that actually work.
         </Description>
         <CustomButtonGroup>
           

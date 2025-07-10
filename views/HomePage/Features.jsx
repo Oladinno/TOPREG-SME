@@ -8,28 +8,51 @@ import { media } from 'utils/media';
 const FEATURES = [
   {
     imageUrl: '/grid-icons/asset-1.svg',
-    title: 'Smart Invoicing',
-    description:
-      'Create professional invoices quickly and track customer payments with ease. Get paid faster and stay organized.',
+    title: 'LEGAL & BUSINESS SETUP',
+    description:[
+       '• Business Registration (CAC)',
+    <br key="br1" />, // Key is important for React lists
+    '• Trademark & IP Protection',
+    <br key="br2" />, // Key is important for React lists
+    '• SCUML Certificate Support',
+    <br key="br3" />, // Key is important for React lists
+    '• Compliance Advisory & Filing',
+  ]
   },
   {
     imageUrl: '/grid-icons/asset-2.svg',
-    title: 'Inventory Management',
-    description:
-      'Keep real-time track of your products. Know what’s in stock, get alerts, and manage inventory efficiently.',
+    title: 'BUSINESS TOOLS',
+    description:[
+       '• Aje Invoicer - Create branded invoices, receipts, and track payments',
+    <br key="br1" />, // Key is important for React lists
+    '• CompanyBuddy - CAC reminders & secure document storage',
+    <br key="br2" />, // Key is important for React lists
+    '• HR Essentials Toolkit - Hiring templates, employment contracts & staff policies',
+    <br key="br3" />, // Key is important for React lists
+    '•  ⁠Company Policy structuring',
+  ]
   },
   {
     imageUrl: '/grid-icons/asset-3.svg',
-    title: 'Sales Tracking',
-    description:
-      'Monitor daily sales activity across all channels. Understand what’s working and scale your efforts wisely.',
-  },
-  {
+    title: 'GROWTH & SCALE SUPPORT',
+    description:[
+       '•  Business Structure Audits',
+    <br key="br1" />, // Key is important for React lists
+    '• Strategy & Expansion Guidance',
+    <br key="br2" />, // Key is important for React lists
+    '• Funding/Grant Readiness Support',
+    <br key="br3" />, // Key is important for React lists
+    '• SME Coaching & Advisory',
+    <br key="br4" />,
+    '• Financial Analytics (vie Aje Invoicer Al)',
+  ]
+ },
+  /*{
     imageUrl: '/grid-icons/asset-4.svg',
     title: 'Business Management',
     description:
       'Easily manage customer details, history, and communication — build trust and repeat business.',
-  },
+  }, */
 ];
 
 export default function Features() {

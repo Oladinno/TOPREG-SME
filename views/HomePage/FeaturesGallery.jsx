@@ -10,28 +10,29 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: ' AJÉ INVOICER & EXPENSE MANAGER',
+    title: ' TOPREG ',
     description:
-      '<p>Create professional, branded invoices in minutes with Ajé Invoicer. Track payments in real-time, send reminders, and ensure you are always on top of your receivables. Say goodbye to manual errors and hello to consistent cash flow. </p>',
-    imageUrl: '/demo 1.png',
+      '<p>MSME, START-UPS, BUSINESS & GROWTH</p>',
+    imageUrl: '/partner2.jpg',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
-  /*{
-    title: 'Comprehensive Lifetime Invoice Tracking',
+  {
+    title: 'AJE 360 TOOLS',
     description:
-      '<p>Gain clear insights into your businesses financial performance. Ajé Invoicer allows you to effortlessly track your total invoiced amount, review past invoices, and manage client payment histories. Make data-backed decisions to scale your revenue. </p>',
-    imageUrl: '/demo 4.png',
+      '<p>TECH & TOOLS </p>',
+    imageUrl: '/Aje Logo1.jpg',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
-  },*/
+  },
   {
-    title: 'COMPANY BUDDY ',
+    title: ['PLOB', 'PROMO LOVER BROTHERS'],
     description:
-      '<p>Navigate Nigerian corporate regulations with ease using CompanyBuddy. From CAC registration to SCUML compliance, access essential services directly from your mobile device. Get expert support and personalized guidance to ensure your business is always compliant and thriving.</p>',
-    imageUrl: '/demo 5.png',
+      '<p>MEDIA & PR</p>',
+    imageUrl: '/partner1.jpg',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
+    
   },
 ];
 
@@ -58,7 +59,18 @@ export default function FeaturesGallery() {
           <CircleContainer>
             <ThreeLayersCircle baseColor={isActive ? 'transparent' : singleTab.baseColor} secondColor={singleTab.secondColor} />
           </CircleContainer>
-          <h4>{singleTab.title}</h4>
+          <h4>
+                {/* Conditionally render based on whether singleTab.title is an array */}
+                {Array.isArray(singleTab.title) ? (
+                    <>
+                        {singleTab.title[0]}
+                        <br />
+                        {singleTab.title[1]}
+                    </>
+                ) : (
+                    singleTab.title
+                )}
+            </h4>
         </TabTitleContainer>
         <Collapse isOpen={isActive} duration={300}>
           <TabContent>
@@ -77,7 +89,7 @@ export default function FeaturesGallery() {
     <FeaturesGalleryWrapper>
       <Content>
         <OverTitle>features</OverTitle>
-        <SectionTitle>OUR AVAILABLE TOOLS</SectionTitle>
+        <SectionTitle>Partners & Affilate Companies</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

@@ -14,7 +14,7 @@ export default function Homepage({ posts }) {
   return (
     <>
       <Head>
-        <title>Aje 360 | Empowering Africa&apos;s Entrepreneurs</title>
+        <title>TOPREG SME | We turn Nigerian hustles into structured and scalable businesses.</title>
         <meta
           name="description"
           content="Aje 360 – powerful tools for African SMEs to thrive with clarity, confidence, and control."
@@ -31,30 +31,39 @@ export default function Homepage({ posts }) {
             title="Empowering African Entrepreneurs"
             overTitle="Our Vision"
           >
-           From invoicing, to sales and customer management, to inventory, finances, growth tracking, operations & management,  <strong> AJE360</strong> equips you with everything to run and grow your business — no manual workflows, no mundane tasks, just smart, AI-powered automation.
+        
 
-            <br /><br />
-            We believe in a continent where no business — especially small and medium-sized enterprises — is left behind. From the roadside vendor to the rising startup, every entrepreneur deserves simple yet powerful tools to operate and thrive like a global player.
+We envision a Nigeria where every business owner — whether it’s the woman selling fashion products at home or the man managing a small logistics startup — has a clear, structured path to building a structured business.
+<br />
+A Nigeria where entrepreneurs don’t just hustle — but build businesses that grow, scale, and succeed with precision.  
+<br />
+No more running blind. No more winging it. Just access and assistance to the right legal compliances, systems, tools, and business growth guidance from day one of your entrepreneurial venture.
           </BasicSection>
 
           {/* Value Proposition Section */}
           <BasicSection
             imageUrl="/home2.jpg"
-            title="Why Aje 360?"
+            title="💡 Why TOPREG SME?"
             overTitle="Built for Growth"
             reversed
           >
             <p>
-              We don&apos;t just help African businesses survive — we help them thrive. Our platform is designed to
-              equip you with the systems and confidence to manage your operations like a pro.
+              We don’t just register your business and leave you hanging.
+              <br />
+              At TOPREG SME, we walk with you beyond incorporation — because we know that’s just the beginning.
+              <br />After you legally register your business, we equip you with real tools to help you operate and grow:
+
             </p>
             <ul>
-              <li><strong>Smart Invoicing</strong> — Create and track invoices effortlessly.</li>
-              <li><strong>Expense Recording</strong> — Easily log and categorize all your business expenditures.</li>
-              <li><strong>Inventory Tools</strong> — Stay on top of your stock and supplies.</li>
-              <li><strong>Business Insights</strong> — Make informed decisions with data-driven dashboards.</li>
-              <li><strong>Agentic AI Integration</strong> — Leverage intelligent automation for smarter business processes.</li>
+              <li><strong>HR Documentation Toolkit</strong> —  To guide your hiring process, employee onboarding, and staff management like a pro.</li>
+              <li><strong>Aje Invoicer</strong> —  Our advanced invoicing app built for Nigerian businesses to create receipts, track payments, and manage revenue.</li>
+              <li><strong>CompanyBuddy</strong> — your digital assistant for all CAC-related tasks, reminders, and safe, organized storage of important business documents.</li>
             </ul>
+
+            <p> 
+              We’re not just about helping you start — we’re here to help you grow, stay compliant, and scale with structure.
+            </p>
+
           </BasicSection>
         </WhiteBackgroundContainer>
 
