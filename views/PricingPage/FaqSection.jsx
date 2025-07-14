@@ -7,7 +7,7 @@ export default function FaqSection() {
     <Wrapper>
       <SectionTitle>Frequently asked question</SectionTitle>
       <Accordion title="What is Aje360 and how does it help my business?">
-        Aje360 is dedicated to empowering African SMEs with innovative, reliable, and relevant software tools. We help businesses like yours to scale by simplifying critical operations such as invoicing, financial management, and corporate compliance (CAC services), enabling you to operate with clarity, confidence, and control.
+      Aje360 is dedicated to empowering African SMEs with innovative, reliable, and relevant software tools. We help businesses like yours to scale by simplifying critical operations such as invoicing, financial management, and corporate compliance (CAC services), enabling you to operate with clarity, confidence, and control.
       </Accordion>
 
       <Accordion title="What is Ajé Invoicer and how can it benefit me?">

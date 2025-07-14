@@ -17,7 +17,7 @@ export default function Homepage({ posts }) {
         <title>TOPREG SME | We turn Nigerian hustles into structured and scalable businesses.</title>
         <meta
           name="description"
-          content="Aje 360 – powerful tools for African SMEs to thrive with clarity, confidence, and control."
+          content="TOPREG SME | We turn Nigerian hustles into structured and scalable businesses."
         />
       </Head>
       <HomepageWrapper>

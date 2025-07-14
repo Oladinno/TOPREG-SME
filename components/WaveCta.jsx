@@ -24,7 +24,7 @@ export default function WaveCta() {
           <Title>Empowering African Entrepreneurs to Scale with Confidence</Title>
           <CustomButtonGroup>
             <Button onClick={() => setIsModalOpened(true)}>
-              Join the Aje360 Community <span>&rarr;</span>
+              Join the Top Reg SME Community <span>&rarr;</span>
             </Button>
             <NextLink href="/features" passHref>
               <OutlinedButton transparent>

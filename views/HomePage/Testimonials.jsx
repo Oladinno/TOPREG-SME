@@ -11,7 +11,7 @@ import { media } from 'utils/media';
 const TESTIMONIALS = [
   {
     companyLogoUrl: '/testimonials/company-logo-1.svg',
-    content: `Aje360 has transformed the way we source products globally. What used to take weeks now takes days. The platform is intuitive, and the support is unmatched.`,
+    content: `Top Reg SME has transformed the way we source products globally. What used to take weeks now takes days. The platform is intuitive, and the support is unmatched.`,
     author: {
       name: 'Chidi Nwankwo',
       title: 'Founder, ZoboTech Nigeria',
@@ -29,7 +29,7 @@ const TESTIMONIALS = [
   },
   {
     companyLogoUrl: '/testimonials/company-logo-3.svg',
-    content: `Aje360 gave us the confidence to compete globally. It's more than a marketplace — it’s a growth partner for any African brand with a vision.`,
+    content: `Top Reg SME gave us the confidence to compete globally. It's more than a marketplace — it’s a growth partner for any African brand with a vision.`,
     author: {
       name: 'Tunde Martins',
       title: 'Co-Founder, AfroEssence Ltd.',

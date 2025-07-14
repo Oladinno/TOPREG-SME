@@ -10,7 +10,7 @@ import { media } from 'utils/media'; // Assuming your media query utility
 export default function HelpCenterPage() {
   return (
     <Page
-      title="Aje360 Help Center" // Specific title for the help center
+      title="Top Reg SME Help Center" // Specific title for the help center
       description="Find answers to your questions, connect with our support team, and access valuable resources for using Aje360."
     >
       <Wrapper>
